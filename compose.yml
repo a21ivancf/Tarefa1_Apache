@@ -6,6 +6,7 @@ services:
     volumes:
       - ./apache/tarefa1.conf:/etc/apache2/sites-enabled/test1.conf
       - ./ivan.lan:/opt/web/ivan.lan
+      - ./omeusitio.lan:/opt/web/omeusitio.lan
 
     networks:
       redeapache:
@@ -13,6 +14,7 @@ services:
           - www.ivan.lan
           - ivan.lan
           - eq1.ivan.lan
+          - www.omeusitio.lan
     develop:
       watch:
         - path: ./apache/test1.conf
